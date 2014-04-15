@@ -1,48 +1,95 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>haPiHP</title><link rel="icon" href="http://static.hubspot.com/favicon.ico"><link rel="stylesheet" href="https://static2cdn.hubspot.com/hubspot_public_assets/static-1.112/shared/sass/hubspot_public_assets.css"><link rel="stylesheet" href="https://static.hubspot.com/bundles/navigation.css"><link rel="stylesheet" href="/static-resources/css/print.css"><link rel="stylesheet" href="/static-resources/css/highlight-theme-github.css"><link rel="stylesheet" href="/static-resources/css/navigation-tweaks.css"><link rel="stylesheet" href="/static-resources/css/documentation.css"><script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="/haPiHP//resources/executr/lib/CodeMirror/codemirror.css"><link rel="stylesheet" href="/haPiHP//resources/executr/build/css/executr.css"><script src="/haPiHP//resources/executr/lib/CodeMirror/codemirror.js"></script><script src="/haPiHP//resources/executr/lib/CodeMirror/mode/coffeescript/coffeescript.js"></script><script src="/haPiHP//resources/executr/lib/CodeMirror/mode/javascript/javascript.js"></script><script src="/haPiHP//resources/executr/lib/coffee-script.js"></script><script src="/haPiHP//resources/executr/lib/underscore.min.js"></script><script src="/haPiHP//resources/executr/lib/js2coffee.min.js"></script><script src="/haPiHP//resources/executr/build/js/executr.js"></script><script src="/haPiHP//resources/executr/build/js/executr-run.js"></script><script src="//use.typekit.net/jbn8qxr.js"></script><script>try{Typekit.load();}catch(e){}
-</script></head><body><div id="hs-nav-v3" class="nav-width-flex signed-out-nav">
-    <div class="hs-nav-section main-nav">
-        <div class="nav-section-inner">
-            <ul class="nav-links-left">
-                <li class="first"><a class="nav-logo" href="http://www.hubspot.com/"><img height="34" src="https://static.hubspot.com/style-guide/img/nav-sprocket.png" width="29"></a></li>
-                <li>
-                    <a href="http://dev.hubspot.com">
-                        HubSpot Dev &amp; Design
-                    </a>
-                </li>
-                <li>
-                    <a href="http://hubspot.github.com">
-                        Open Source
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav-links-right">
-                <li class="first">
-                    <a href="http://dev.hubspot.com/jobs/" class="sign-in">You should work at HubSpot</a>
-                </li>
-            </ul>
-        </div>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="HubSpot : An updated PHP client for the HubSpot API" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>HubSpot</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/fungku/hubspot">View on GitHub</a>
+
+          <h1 id="project_title">HubSpot</h1>
+          <h2 id="project_tagline">An updated PHP client for the HubSpot API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/fungku/hubspot/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/fungku/hubspot/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
     </div>
-</div>
-<div class="hs-doc-marquee"><div class="hs-page-width-normal"><div class="row-fluid"><div class="span6"><h1>haPiHP</h1><h3 class="hs-doc-marquee-description"></h3><p class="hs-doc-marquee-release"></p><p class="hs-doc-marquee-stars"><iframe src="http://ghbtns.com/github-btn.html?user=HubSpot&repo=haPiHP&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="240" height="30"></iframe></p></div><div class="span6"><div class="hs-doc-marquee-buttons"><a class="hs-doc-marquee-button" href="http://github.com/HubSpot/haPiHP">Star on GitHub</a><a class="hs-doc-marquee-button" href="http://github.com/HubSpot/haPiHP/archive/master.zip">Download ZIP</a></div></div></div></div></div><div class="hs-page-width-normal"><div class="row-fluid"><div class="span3"><div class="hs-doc-sidenav"><nav><ul class="hs-public-sidenav"><li class=""><a href="">Home</a></li></ul></nav></div></div><div class="span9"><div class="hs-doc-content"><h2>haPiHP</h2>
-<h3>Overview</h3>
-<p>A PHP client for HubSpot&#39;s APIs.  Docs for this client: <a href="https://github.com/HubSpot/haPiHP/wiki/haPiHP"><a href="https://github.com/HubSpot/haPiHP/wiki/haPiHP">https://github.com/HubSpot/haPiHP/wiki/haPiHP</a></a>.</p>
-<p>General API reference documentation: <a href="http://developers.hubspot.com/docs"><a href="http://developers.hubspot.com/docs">http://developers.hubspot.com/docs</a></a>.</p>
-<h3>Contributors</h3>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="hubspot-php-api-client" class="anchor" href="#hubspot-php-api-client"><span class="octicon octicon-link"></span></a>HubSpot PHP API client</h1>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>This is how I use it.</p>
+
+<div class="highlight highlight-php"><pre><span class="nv">$hapikey</span> <span class="o">=</span> <span class="s2">"demo"</span><span class="p">;</span>
+
+<span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'count'</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// defaults to 20</span>
+    <span class="s1">'property'</span> <span class="o">=&gt;</span> <span class="s1">'firstname'</span><span class="p">,</span> <span class="c1">// only get the specified properties</span>
+    <span class="s1">'vidOffset'</span> <span class="o">=&gt;</span> <span class="s1">'50'</span> <span class="c1">// contact offset used for paging</span>
+<span class="p">);</span>
+
+<span class="c1">// get 5 contacts' firstnames, offset by 50</span>
+<span class="nv">$contacts</span> <span class="o">=</span> <span class="nx">HubSpot</span><span class="o">::</span><span class="na">contacts</span><span class="p">(</span><span class="nv">$hapikey</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">get_all_contacts</span><span class="p">(</span><span class="nv">$params</span><span class="p">);</span>
+</pre></div>
+
+<h2>
+<a name="hapihp" class="anchor" href="#hapihp"><span class="octicon octicon-link"></span></a>haPiHP</h2>
+
+<h3>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>A PHP client for HubSpot's APIs.  Docs for this client: <a href="https://github.com/HubSpot/haPiHP/wiki/haPiHP">https://github.com/HubSpot/haPiHP/wiki/haPiHP</a>.</p>
+
+<p>General API reference documentation: <a href="http://developers.hubspot.com/docs">http://developers.hubspot.com/docs</a>.</p>
+
+<h3>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h3>
+
 <ul>
-<li><a href="https://github.com/adrianmott">adrianmott</a> (Adrian Mott)</li>
-<li><a href="https://github.com/chrishoult">chrishoult</a> (Christopher Hoult)</li>
-<li><a href="https://github.com/TheRealBenSmith">TheRealBenSmith</a> (Ben Smith)</li>
-<li><a href="https://github.com/ajorgensen">ajorgensen</a> (Andrew Jorgensen)</li>
+<li>
+<a href="https://github.com/adrianmott">adrianmott</a> (Adrian Mott)</li>
+<li>
+<a href="https://github.com/chrishoult">chrishoult</a> (Christopher Hoult)</li>
+<li>
+<a href="https://github.com/TheRealBenSmith">TheRealBenSmith</a> (Ben Smith)</li>
+<li>
+<a href="https://github.com/ajorgensen">ajorgensen</a> (Andrew Jorgensen)</li>
 <li><a href="https://github.com/jprado">jprado</a></li>
-<li><a href="https://github.com/thinkclay">thinkclay</a> (Clayton McIlrath)</li>
+<li>
+<a href="https://github.com/thinkclay">thinkclay</a> (Clayton McIlrath)</li>
 </ul>
-</div></div></div></div><div class="hs3-public-footer"><div class="row-fluid hs-page-width-normal"><div class="span3 hidden-phone"><h3>HubSpot</h3><ul><li><a href="http://www.hubspot.com">Home</a></li><li><a href="http://www.hubspot.com/software">Products</a></li><li><a href="http://www.hubspot.com/internet-marketing-company/">About</a></li></ul></div><div class="span3"><h3>Projects</h3><ul><li><a href="http://github.hubspot.com/messenger">Messenger</a></li><li><a href="http://github.hubspot.com/facewall">Facewall</a></li><li><a href="http://github.hubspot.com/jquery-zoomer">jQuery Zoomer</a></li><li><a href="http://github.hubspot.com/humanize">Humanize</a></li><li><a href="http://github.hubspot.com/teeble">Teeble</a></li></ul></div><div class="span3"><h3>Development Team</h3><ul><li><a href="http://dev.hubspot.com">Home</a></li><li><a href="http://dev.hubspot.com/teams">Teams</a></li><li><a href="http://dev.hubspot.com/people">People</a></li><li><a href="http://dev.hubspot.com/jobs">Jobs</a></li></ul></div><div class="span3 hidden-phone"><h3>Developer API</h3><ul><li><a href="http://developers.hubspot.com/">Developer Documentation</a></li></ul></div></div></div><!-- Start of Async HubSpot Analytics Code -->
-<script type="text/javascript">
-    (function(d,s,i,r) {
-        if (d.getElementById(i)){return;}
-        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-        n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/51294.js';
-        e.parentNode.insertBefore(n, e);
-    })(document,"script","hs-analytics",300000);
-</script>
-<!-- End of Async HubSpot Analytics Code --></body></html>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">HubSpot maintained by <a href="https://github.com/fungku">fungku</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
