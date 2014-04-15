@@ -52,11 +52,31 @@
     <span class="o">-&gt;</span><span class="na">get_all_contacts</span><span class="p">(</span><span class="nv">$params</span><span class="p">);</span>
 </pre></div>
 
+<p>If you dont use the ServiceProvider or Facades you will have to use it like this:</p>
+
+<div class="highlight highlight-php"><pre><span class="nv">$hapikey</span> <span class="o">=</span> <span class="s2">"demo"</span><span class="p">;</span>
+
+<span class="nv">$params</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'count'</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// defaults to 20</span>
+    <span class="s1">'property'</span> <span class="o">=&gt;</span> <span class="s1">'firstname'</span><span class="p">,</span> <span class="c1">// only get the specified properties</span>
+    <span class="s1">'vidOffset'</span> <span class="o">=&gt;</span> <span class="s1">'50'</span> <span class="c1">// contact offset used for paging</span>
+<span class="p">);</span>
+
+<span class="c1">// get 5 contacts' firstnames, offset by 50</span>
+<span class="nv">$hubspot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Fungku\HubSpot\HubSpot</span><span class="p">;</span>
+
+<span class="nv">$contacts</span> <span class="o">=</span> <span class="nv">$hubspot</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="p">(</span><span class="nv">$hapikey</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">get_all_contacts</span><span class="p">(</span><span class="nv">$params</span><span class="p">);</span>
+</pre></div>
+
 <h2>
-<a name="hapihp" class="anchor" href="#hapihp"><span class="octicon octicon-link"></span></a>haPiHP</h2>
+<a name="forked-from" class="anchor" href="#forked-from"><span class="octicon octicon-link"></span></a>Forked from:</h2>
 
 <h3>
-<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h3>
+<a name="hapihp" class="anchor" href="#hapihp"><span class="octicon octicon-link"></span></a>haPiHP</h3>
+
+<h4>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h4>
 
 <p>A PHP client for HubSpot's APIs.  Docs for this client: <a href="https://github.com/HubSpot/haPiHP/wiki/haPiHP">https://github.com/HubSpot/haPiHP/wiki/haPiHP</a>.</p>
 
