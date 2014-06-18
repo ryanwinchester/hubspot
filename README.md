@@ -6,7 +6,7 @@ In composer.json:
 
 ```
 "require": {
-	"fungku/laravel-hubspot": "1.1.*"
+	"fungku/hubspot": "1.0.*"
 }
 ```
 then run `composer install` or `composer update`
