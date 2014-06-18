@@ -17,16 +17,17 @@ class HubSpot {
 
     private $hapikey;
 
-    function __construct($hapikey = null)
+    private $userAgent;
+
+    function __construct($hapikey = null, $userAgent = "haPiHP default UserAgent")
     {
+        $this->userAgent = $userAgent;
+
         if (is_null($hapikey))
-        {
             $this->hapikey = getenv('HUBSPOT_APIKEY');
-        }
-        else
-        {
+
+        if ( ! $this->hapikey)
             $this->hapikey = $hapikey;
-        }
     }
 
     public function blog() { return new Blog($this->hapikey); }
