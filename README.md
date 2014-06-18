@@ -1,5 +1,17 @@
 # HubSpot PHP API client
 
+## Setup
+
+In composer.json:
+
+```
+"require": {
+	"fungku/laravel-hubspot": "1.1.*"
+}
+```
+then run `composer install` or `composer update`
+
+
 ## Example
 
 
