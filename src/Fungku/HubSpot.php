@@ -21,13 +21,11 @@ class HubSpot {
 
     function __construct($hapikey = null, $userAgent = "haPiHP default UserAgent")
     {
+        $this->hapikey = $hapikey;
         $this->userAgent = $userAgent;
 
-        if (is_null($hapikey))
+        if (is_null($this->hapikey))
             $this->hapikey = getenv('HUBSPOT_APIKEY');
-
-        if ( ! $this->hapikey)
-            $this->hapikey = $hapikey;
     }
 
     public function blog() { return new Blog($this->hapikey); }
