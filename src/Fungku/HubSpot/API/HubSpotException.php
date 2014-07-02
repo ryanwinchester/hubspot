@@ -26,4 +26,4 @@ namespace Fungku\HubSpot\API;
  * @author Christopher Hoult <chris.hoult@datasift.com>
  * @see https://github.com/chrishoult
  */
-class HubSpotException extends Exception {}
+class HubSpotException extends \Exception {}
