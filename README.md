@@ -1,5 +1,7 @@
 # HubSpot PHP API client
 
+[![Latest Stable Version](https://poser.pugx.org/fungku/hubspot/v/stable.svg)](https://packagist.org/packages/fungku/hubspot) [![Total Downloads](https://poser.pugx.org/fungku/hubspot/downloads.svg)](https://packagist.org/packages/fungku/hubspot) [![Latest Unstable Version](https://poser.pugx.org/fungku/hubspot/v/unstable.svg)](https://packagist.org/packages/fungku/hubspot) [![License](https://poser.pugx.org/fungku/hubspot/license.svg)](https://packagist.org/packages/fungku/hubspot)
+
 ## Setup
 
 In composer.json:
