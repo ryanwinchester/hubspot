@@ -20,7 +20,7 @@ namespace Fungku\HubSpot\API;
 * License.
 */
 
-class Properties extends Baseclient{
+class Properties extends BaseClient{
 
 	protected $API_PATH = 'contacts';
 	protected $API_VERSION = 'v1';	
