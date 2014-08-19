@@ -49,4 +49,4 @@ General API reference documentation: [http://developers.hubspot.com/docs](http:/
 * [ajorgensen](https://github.com/ajorgensen) (Andrew Jorgensen)
 * [jprado](https://github.com/jprado)
 * [thinkclay](https://github.com/thinkclay) (Clayton McIlrath)
-*
+* [adamgoose] (https://github.com/adamgoose) (Adam Engebretson)
