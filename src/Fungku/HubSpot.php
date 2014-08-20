@@ -28,7 +28,6 @@ class HubSpot {
     /**
      * @param string $hapikey
      * @param string $userAgent
-     * @return void
      */
     function __construct($hapikey = null, $userAgent = "haPiHP default UserAgent")
     {
