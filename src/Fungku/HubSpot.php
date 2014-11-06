@@ -28,27 +28,27 @@ class HubSpot {
             $this->hapikey = getenv('HUBSPOT_APIKEY');
     }
 
-    public function blog() { return new Blog($this->hapikey); }
+    public function blog()          { return new Blog($this->hapikey); }
 
-    public function contacts() { return new Contacts($this->hapikey); }
+    public function contacts()      { return new Contacts($this->hapikey); }
 
-    public function forms() { return new Forms($this->hapikey); }
+    public function forms()         { return new Forms($this->hapikey); }
 
-    public function keywords() { return new Keywords($this->hapikey); }
+    public function keywords()      { return new Keywords($this->hapikey); }
 
     public function leadNurturing() { return new LeadNurturing($this->hapikey); }
 
-    public function leads() { return new Leads($this->hapikey); }
+    public function leads()         { return new Leads($this->hapikey); }
 
-    public function lists() { return new Lists($this->hapikey); }
+    public function lists()         { return new Lists($this->hapikey); }
 
-    public function marketPlace() { return new MarketPlace($this->hapikey); }
+    public function marketPlace()   { return new MarketPlace($this->hapikey); }
 
-    public function properties() { return new Properties($this->hapikey); }
+    public function properties()    { return new Properties($this->hapikey); }
 
-    public function settings() { return new Settings($this->hapikey); }
+    public function settings()      { return new Settings($this->hapikey); }
 
-    public function socialMedia() { return new SocialMedia($this->hapikey); }
+    public function socialMedia()   { return new SocialMedia($this->hapikey); }
 
-    public function workflows() { return new WorkFlows($this->hapikey); }
+    public function workflows()     { return new WorkFlows($this->hapikey); }
 }
