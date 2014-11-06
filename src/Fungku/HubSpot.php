@@ -15,10 +15,20 @@ use Fungku\HubSpot\API\Workflows;
 
 class HubSpot {
 
+    /**
+     * @var string
+     */
     private $hapikey;
 
+    /**
+     * @var string
+     */
     private $userAgent;
 
+    /**
+     * @param string $hapikey
+     * @param string $userAgent
+     */
     function __construct($hapikey = null, $userAgent = "haPiHP default UserAgent")
     {
         $this->hapikey = $hapikey;

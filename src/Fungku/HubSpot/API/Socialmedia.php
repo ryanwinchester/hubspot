@@ -20,7 +20,7 @@ namespace Fungku\HubSpot\API;
 * License.
 */
 
-class SocialMedia extends Baseclient{
+class SocialMedia extends BaseClient{
 
 	protected $API_PATH = 'broadcast';
 	protected $API_VERSION = 'v1';
