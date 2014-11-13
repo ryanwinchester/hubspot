@@ -1,6 +1,6 @@
 {
     "name": "fungku/hubspot",
-    "description": "HubSpot PHP API client",
+    "description": "HubSpot PHP API client (wrapper for haPiHP)",
     "license": "Apache-2.0",
     "authors": [
         {
