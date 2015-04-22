@@ -2,7 +2,7 @@
 
 ## haPiHP wrapper
 
-[![Latest Stable Version](https://poser.pugx.org/fungku/hubspot/v/stable.svg)](https://packagist.org/packages/fungku/hubspot) [![Total Downloads](https://poser.pugx.org/fungku/hubspot/downloads.svg)](https://packagist.org/packages/fungku/hubspot) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fungku/hubspot/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fungku/hubspot/?branch=master) [![License](https://poser.pugx.org/fungku/hubspot/license.svg)](https://packagist.org/packages/fungku/hubspot)
+[![Latest Stable Version](https://poser.pugx.org/fungku/hubspot/v/stable.svg)](https://packagist.org/packages/fungku/hubspot) [![Total Downloads](https://img.shields.io/packagist/dt/fungku/hubspot.svg)](https://packagist.org/packages/fungku/hubspot) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fungku/hubspot/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fungku/hubspot/?branch=master) [![License](https://poser.pugx.org/fungku/hubspot/license.svg)](https://packagist.org/packages/fungku/hubspot)
 
 If you want to use the new COS or v2 endpoints, I am writing a completely new api client: https://github.com/fungku/hubspot-php
 
