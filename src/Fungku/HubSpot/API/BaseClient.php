@@ -67,9 +67,10 @@ class BaseClient
      *
      * @param $HAPIKey: String value of HubSpot API Key for requests
      */
-    public function __construct($HAPIKey,$userAgent="haPiHP default UserAgent")
+    public function __construct($HAPIKey, $connectTimeout=300, $userAgent="haPiHP default UserAgent")
     {
         $this->HAPIKey = $HAPIKey;
+        $this->connectTimeout = $connectTimeout;
         $this->userAgent = $userAgent;
     }
 
@@ -185,6 +186,7 @@ class BaseClient
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);    // new
@@ -216,6 +218,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);    // new
@@ -253,6 +256,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);    // new
@@ -285,6 +289,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $body);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
@@ -316,6 +321,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($body)));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -348,6 +354,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/atom+xml','Content-Length: ' . strlen($body)));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -380,6 +387,7 @@ class BaseClient
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, $this->userAgent);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTimeout);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json','Content-Length: ' . strlen($body)));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
