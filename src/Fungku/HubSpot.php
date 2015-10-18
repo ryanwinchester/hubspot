@@ -23,17 +23,16 @@ class HubSpot {
     /**
      * @var string
      */
-    private $userAgent;
+    private $userAgent = 'Fungku_haPiHP/1.0 (https://github.com/ryanwinchester/hubspot)';
 
     /**
      * @param string $hapikey
      * @param string $userAgent
      */
-    function __construct($hapikey = null, $connectTimeout, $userAgent = "haPiHP default UserAgent")
+    function __construct($hapikey = null, $connectTimeout)
     {
         $this->hapikey = $hapikey;
         $this->connectTimeout = $connectTimeout;
-        $this->userAgent = $userAgent;
 
         if (is_null($this->hapikey))
             $this->hapikey = getenv('HUBSPOT_APIKEY');
