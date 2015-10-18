@@ -29,7 +29,7 @@ class HubSpot {
      * @param string $hapikey
      * @param string $userAgent
      */
-    function __construct($hapikey = null, $connectTimeout)
+    function __construct($hapikey = null, $connectTimeout = 0)
     {
         $this->hapikey = $hapikey;
         $this->connectTimeout = $connectTimeout;
