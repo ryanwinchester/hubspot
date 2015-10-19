@@ -61,4 +61,6 @@ class HubSpot {
     public function socialMedia()   { return new SocialMedia($this->hapikey, $this->connectTimeout, $this->userAgent); }
 
     public function workflows()     { return new WorkFlows($this->hapikey, $this->connectTimeout, $this->userAgent); }
+
+    public function engagement()    { return new Engagement($this->hapikey, $this->connectTimeout, $this->userAgent);}
 }
