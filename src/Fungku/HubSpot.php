@@ -12,6 +12,7 @@ use Fungku\HubSpot\API\Properties;
 use Fungku\HubSpot\API\Settings;
 use Fungku\HubSpot\API\SocialMedia;
 use Fungku\HubSpot\API\Workflows;
+use Fungku\HubSpot\API\Engagement;
 
 class HubSpot {
 
