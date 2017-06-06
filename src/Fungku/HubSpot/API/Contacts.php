@@ -75,6 +75,50 @@ class Contacts extends BaseClient {
     	}
     }
 
+    
+
+    /**
+     * Create a group of contacts or update them if they already exist.
+     *
+     * eg:
+     * array(
+     * array('email'=>'testBatch5@qq.com','param'=>array('firstname'=>'JasonT5','lastname'=>'Zhang5','phone'=>'555-122-2325','ispaid'=>'No')),
+     * array('email'=>'testBatch6@qq.com','param'=>array('firstname'=>'JasonT6','lastname'=>'Zhang6','phone'=>'555-122-2326','ispaid'=>'No')),
+     * array('email'=>'testBatch7@qq.com','param'=>array('firstname'=>'JasonT7','lastname'=>'Zhang7','phone'=>'555-122-2327','ispaid'=>'No')),
+     * array('email'=>'testBatch8@qq.com','param'=>array('firstname'=>'JasonT8','lastname'=>'Zhang8','phone'=>'555-122-2328','ispaid'=>'No')),
+     * )
+     *
+     * @param params: array of properties and property values for new contact, email is required
+     *
+     * @return Response body with JSON object
+     * for created Contact from HTTP POST request
+     *
+     * @throws HubSpotException
+     **/
+    public function batch_create_or_update($params){
+        $endpoint = 'contact/batch/';
+        $properties = array();
+        foreach ($params as $k => $param) {
+            $propertie = array();
+            foreach ($param['param'] as $key => $value){
+                array_push($propertie, array("property"=>$key,"value"=>$value));
+            }
+            $properties[$k]['properties'] = $propertie;
+            if(!empty($param['vid'])){
+                $properties[$k]['vid'] = $param['vid'];
+            }elseif (!empty($param['email'])){
+                $properties[$k]['email'] = $param['email'];
+            }else
+                continue;
+        }
+        $properties = json_encode($properties);
+        try{
+            return json_decode($this->execute_JSON_post_request($this->get_request_url($endpoint,null),$properties));
+        } catch (HubSpotException $e) {
+            throw new HubSpotException('Unable to create contact: ' . $e);
+        }
+    }
+
     /**
 	* Delete a Contact
 	*
